@@ -9,4 +9,16 @@
     <p>Сегодня @ViewData["CurrentDay"] число или @ViewData["NumberDay"] день</p>
     <br>
     <p>Случайная буква: @ViewData["RandomLetter"]</p>
+
+    <h2>Список ресторанов:</h2>
+    <ul>
+        @for(int i = 0; i < @Model.nameRestaurant.Length;i++)
+        {
+            if (@Model.nameRestaurant[i].StartsWith(@ViewData["RandomLetter"].ToString().ToUpper()))
+            {
+                <li>@Model.nameRestaurant[i]</li>
+            }
+            
+        }
+    </ul>
 </div>

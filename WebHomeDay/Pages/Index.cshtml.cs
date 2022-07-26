@@ -13,6 +13,10 @@ namespace WebHomeDay.Pages
             _logger = logger;
         }
 
+        public string[] nameRestaurant = { "Grusha", "PLITA", "Meat Line", "BarBaris", "Beergarten", "Crab Story", "Probka", "The Repa",
+            "Vino di Vino","ObedBufet","Tequila-Boom","Vinograd","Zeppelin","JEROME","Vincent","Maximilian","OTTO Pizza","Fujiyama",
+            "Matisov","Hanoi City","SunDay Ginza","Volga-Volga","Duderhoff","Douglas","FERN","GRAS","IL MILASE","Jager","Jet Set Sport",
+            "Jai Hind","Korovabar","Kwakker","Las Torres","La Presse"};
         public void OnGet()
         {
             //Текущий день и номер дня
@@ -25,6 +29,7 @@ namespace WebHomeDay.Pages
             //Вывод случайной буквы
             Random rand = new Random();
             char letter;
+            
 
             do
             {
@@ -33,7 +38,6 @@ namespace WebHomeDay.Pages
             } while (!char.IsLetter(letter));
 
             ViewData["RandomLetter"] = letter;
-
         }
     }
 }
